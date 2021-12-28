@@ -39,3 +39,6 @@ For example, Color Choice: Green, Blue, Red, you can:
 # For more information about decision tree, you can find in this website:
 https://www.datacamp.com/community/tutorials/decision-tree-classification-python
 > Note: This ReadMe.md introduced the decision tree is created by Gini index, called CART(Classification and Regression Tree). There are other algorithm to build different decision trees, using Entropy or something. You can find it in this website.
+
+## Example of Piam Indian Diabetes
+![Decision Trees](Pictures/diabetes.png)
