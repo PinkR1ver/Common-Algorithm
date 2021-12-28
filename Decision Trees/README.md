@@ -36,3 +36,6 @@ For example, Color Choice: Green, Blue, Red, you can:
 * (Color Choice: Red or Green)
 > Note: don't calculate impurity score for choose all choice because that would include everyone
 
+# For more information about decision tree, you can find in this website:
+https://www.datacamp.com/community/tutorials/decision-tree-classification-python
+> Note: This ReadMe.md introduced the decision tree is created by Gini index, called CART(Classification and Regression Tree). There are other algorithm to build different decision trees, using Entropy or something. You can find it in this website.
