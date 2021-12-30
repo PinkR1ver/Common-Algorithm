@@ -34,7 +34,7 @@ How do we get it done mathematically?
 
 Loss Function:
 
-$$L = \frac{1}{2} ||w||^2 + C(\# \, of\, mistakes)$$
+$$L=\frac{1}{2}||w||^2 + C(\# \, of\, mistakes)$$
 
 Here, $C$ is a hyperparameter that decides the trade-off between maximizing the margin and minimizing the mistakes, aka. **bias/variance tradeoff**.  When $C$ is small, classification mistakes are given less importance and focus is more on maximizing the margin, whereas when $C$ is large, the focus is more on avoiding misclassification at the expense of keeping the margin small.
 
