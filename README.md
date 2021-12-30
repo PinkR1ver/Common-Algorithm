@@ -6,4 +6,7 @@ A decision tree is a flowchart-like structure in which each internal node repres
 
 ## Support Vector Machine (SVM)
 Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection.
+
+</br>
+
 ![Support vector machine](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_svc_001.png)
