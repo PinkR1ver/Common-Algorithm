@@ -37,7 +37,7 @@ How do we get it done mathematically?
 
 Loss Function:
 
-$$L=\frac{1}{2}||w||^2 + C(\# \, of\, mistakes)$$
+$$L=\frac{1}{2}||w||^2 + C(of\, mistakes)$$
 
 Here, $C$ is a hyperparameter that decides the trade-off between maximizing the margin and minimizing the mistakes, aka. **bias/variance tradeoff**.  When $C$ is small, classification mistakes are given less importance and focus is more on maximizing the margin, whereas when $C$ is large, the focus is more on avoiding misclassification at the expense of keeping the margin small.
 
@@ -55,7 +55,7 @@ And as graph shows that:
 
 $$w^T - b >= 1, y = 1, otherwise \, y=-1$$
 
-And for $C(\# \, of\, mistakes)$, the idea is: for every data point $x_i$, we introduce a slack variable $\xi_i$. The value of $\xi_i$ is the distance of $x_i$ from the corresponding class’s margin if $x_i$ is on the wrong side of the margin, otherwise zero. Thus the points that are far away from the margin on the wrong side would get more penalty.
+And for $C(of\, mistakes)$, the idea is: for every data point $x_i$, we introduce a slack variable $\xi_i$. The value of $\xi_i$ is the distance of $x_i$ from the corresponding class’s margin if $x_i$ is on the wrong side of the margin, otherwise zero. Thus the points that are far away from the margin on the wrong side would get more penalty.
 
 In math:
 $$y_i(W^T \cdot x_i + b) \geqslant 1 - \xi_i$$
@@ -66,7 +66,7 @@ Here, the left-hand side of the inequality could be thought of like the confiden
 
 So,
 
-$$C(\# \, of\, mistakes) = C\sum_i \xi_i + \sum_i \lambda_i(y_i(\bar{w}\cdot\bar{x_i}+b)-1+\xi_i)$$
+$$C(of\, mistakes) = C\sum_i \xi_i + \sum_i \lambda_i(y_i(\bar{w}\cdot\bar{x_i}+b)-1+\xi_i)$$
 
 And you can use concepts of **Lagrange Multiplier** for optimizing loss function under constraints
 
