@@ -40,7 +40,15 @@ Here, $C$ is a hyperparameter that decides the trade-off between maximizing the 
 
 Also need to note is that, not all mistakes are equal. Data points that are far away on the wrong side of the decision boundary should incur more penalty as compared to the ones that are closer. 
 
+For $w$, we are given a training dataset of $n$ points of form:
+$(x_1,y_1), \cdots (x_n, y_n)$
+where the $y_i$ are either 1 or -1, $x_i$ is a $p$-dimensional real vector. You can find the hyperplane:
+
+$$w^Tx-b=0$$
+
 ![W](Picture/SVM_margin.png) </br>
+
+
 
 ### Kernel Functions
 
