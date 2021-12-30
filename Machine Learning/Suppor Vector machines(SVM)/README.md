@@ -14,6 +14,7 @@ The objective of the support vector machine algorithm is to find a **hyperplane 
 
 ### Maximum Margins or Minimus Margins? DON"T ETHIER
 To separate the two classes of data points, there are many possible hyperplanes that could be chosen. Our one possible objective is to find a plane that has the maximum margin, i.e the maximum distance between data points of both classes, which can provide more cnofidence to us to separate data. **(LOW BIAS)**
+
 ![](Picture/Large%20Margin%20or%20Small%20Margin.jpg)  </br>
 
 But **low bias** don't mean **low variance**. Sometimes we need a soft margin to find the sweet point in **bias/variance tradeoff**.
@@ -32,6 +33,7 @@ Take graph above as example. Which decision boundary is better? Red or Green? He
 How do we get it done mathematically?
 
 Loss Function:
+
 $$L = \frac{1}{2} ||w||^2 + C(\# \, of\, mistakes)$$
 
 Here, $C$ is a hyperparameter that decides the trade-off between maximizing the margin and minimizing the mistakes, aka. **bias/variance tradeoff**.  When $C$ is small, classification mistakes are given less importance and focus is more on maximizing the margin, whereas when $C$ is large, the focus is more on avoiding misclassification at the expense of keeping the margin small.
