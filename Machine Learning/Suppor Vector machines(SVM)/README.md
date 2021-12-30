@@ -2,8 +2,11 @@
 
 Thanks To:
 Video series:https://www.youtube.com/watch?v=efR1C6CvhmE&t=3s (What is SVM)
+
 Blog:https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47 (Some basic concepts)
+
 Blog: https://towardsdatascience.com/support-vector-machines-soft-margin-formulation-and-kernel-trick-4c9729dc8efe (Soft Matgin formulation)
+
 Docs:https://scikit-learn.org/stable/modules/svm.html (Official Docs from scikit-learn)
 
 ## What is SVM
@@ -52,8 +55,26 @@ And as graph shows that:
 
 $$w^T - b >= 1, y = 1, otherwise \, y=-1$$
 
+And for $C(\# \, of\, mistakes)$, the idea is: for every data point $x_i$, we introduce a slack variable $\xi_i$. The value of $\xi_i$ is the distance of $x_i$ from the corresponding class’s margin if $x_i$ is on the wrong side of the margin, otherwise zero. Thus the points that are far away from the margin on the wrong side would get more penalty.
 
+In math:
+$$y_i(W^T \cdot x_i + b) \geqslant 1 - \xi_i$$
 
+![](Picture/Xi.png) </br>
+
+Here, the left-hand side of the inequality could be thought of like the confidence of classification. Confidence score ≥ 1 suggests that classifier has classified the point correctly. However, if confidence score < 1, it means that classifier did not classify the point correctly and incurring a linear penalty of $\xi_i$.
+
+So,
+
+$$C(\# \, of\, mistakes) = C\sum_i \xi_i + \sum_i \lambda_i(y_i(\bar{w}\cdot\bar{x_i}+b)-1+\xi_i)$$
+
+And you can use concepts of **Lagrange Multiplier** for optimizing loss function under constraints
+
+Linerly:
+$$L = \frac{1}{2}\lVert w \rVert^2 + \sum_i \lambda(y_i (\bar{w} \cdot \bar{x_i}) -1)$$
+
+Add penalty:
+$$L = \frac{1}{2}\lVert w \rVert^2 +C\sum_i \xi_i + \sum_i \lambda(y_i (\bar{w} \cdot \bar{x_i}) - 1 + \xi)$$
 ### Kernel Functions
 
 #### The Polynomial Kernel
