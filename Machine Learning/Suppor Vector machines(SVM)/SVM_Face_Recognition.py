@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import make_blobs
 import numpy as np
 from scipy import stats
+from ipywidgets import interact, fixed
 
 def plot_svc_decision_function(model, ax=None, plot_support=True):
     """Plot the decision function for a 2D SVC"""
