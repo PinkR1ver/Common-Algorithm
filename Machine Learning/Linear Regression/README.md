@@ -100,6 +100,8 @@ $$
 To prove that the $\hat{\beta}$ obtained is indeed the local minimum, one needs to **differentiate once more to obtain the Hessian matrix** and show that it is positive definite. This is provided by the **Gauss–Markov theorem**.
 
 ## Analysis of variance (ANOVA)
+
+https://web.njit.edu/~wguo/Math644_2012/Math644_Chapter%201_part4.pdf
 ### Deviation
 $\underbrace{Y_i-\bar{Y}}_{\text{Total deviation}} = \underbrace{\hat{Y_i}-\bar{Y}}_{\text{Deviation due the regression}}+\underbrace{e_i}_{\text{Deviation due the error}}\\$
 We can sum them squard up:
