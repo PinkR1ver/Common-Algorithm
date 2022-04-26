@@ -36,7 +36,7 @@ def generate_key(start_point):
     e = find_coprime(r)
     
     while True:
-        d = random.randint(3, 1000000)
+        d = random.randint(3, r)
         if (d * e) % r == 1:
             break
     
@@ -49,6 +49,19 @@ def encryption(message, public_key):
 
 def decryption(message, private_key):
     return message**private_key[1] % private_key[0]
+
+def brute_force(n):
+    p = 3
+    while True:
+        if n % p == 0:
+            q = int(n / p)
+            if isprime(q):
+                break
+        while True:
+            p += 1
+            if isprime(p):
+                break 
+    return p, q
 
 if __name__ == '__main__':
     public_key, private_key = generate_key(700)
@@ -71,3 +84,5 @@ if __name__ == '__main__':
 
     receive_message = ''.join([chr(i) for i in decrypted_message])
     print(receive_message)
+
+    print(brute_force(public_key[0]))
